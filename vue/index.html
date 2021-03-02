@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>VueJS</title>
+    <link rel="stylesheet" href="" />
+    <script src="vue.js"></script>
+    <link ref="stylesheet" src="./node_modules/vue-slider-component/theme/default.css">
+    <script src="./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js"></script>
+   
+
+  </head>
+  <body>
+    <template>
+      <div id="app">
+        <no-ssr>
+          <vue-tiny-slider v-bind="tinySliderOptions">
+            <div>#1</div>
+            <div>#2</div>
+            <div>#3</div>
+            <div>#4</div>
+            <div>#5</div>
+            <div>#6</div>
+          </vue-tiny-slider>
+        </no-ssr>
+      </div>
+    </template>
+    <script>
+      export default {
+        data() {
+          return {
+            tinySliderOptions: {
+              mouseDrag: true,
+              loop: false,
+              items: 1,
+              swipeAngle: 45,
+            },
+          };
+        },
+      };
+    </script>
+  </body>
+</html>
